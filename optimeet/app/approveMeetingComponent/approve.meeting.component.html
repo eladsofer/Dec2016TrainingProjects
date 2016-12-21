@@ -1,0 +1,37 @@
+<h2>Hello {{currentUser.firstName}}, please RSVP to Meeting: {{meeting.MeetingName}}</h2>
+<br>
+<h3>Meeting Description: {{meeting.Desc}}</h3>
+<br>
+<div class="container">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>DATE_TIME</th>
+      <th>APPROVED</th>
+      <th>RESPONSE</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let suggestion of meeting.Suggestions; let i = index">
+      <td>{{i + 1}}</td>
+      <td>{{displayDates[i]}}</td>
+      <td>{{displayDates[i]}}</td>
+      <td>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" [(ngModel)]="this.currentUserResponse[i]">
+            <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+            <span *ngIf="this.currentUserResponse[i]">Yalla!</span>
+          </label>
+        </div>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<button type="submit" class="btn btn-primary" (click)="saveResponseToDB(this.currentUser.id, this.currentUserResponse)">SAVE RESPONSE</button>
+<br>
+<iframe style="width: 100%; min-height: 300px; margin-top: 30px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+        src="https://maps.google.com/maps?q=32.082856,34.768777&hl=es;z=14&amp;output=embed">
+</iframe><br /><small><a href="https://maps.google.com/maps?q=32.082856,34.768777&hl=es;z=14&amp;output=embed" style="color:#0000FF;text-align:left" target="_blank">See map bigger</a></small>

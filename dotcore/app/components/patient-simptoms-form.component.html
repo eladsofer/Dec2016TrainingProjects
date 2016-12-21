@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="login-container">
+    <form #myForm="ngForm">
+      <div class="row">
+        <img (click)="GoToLogin()" class="logo-pointer" src="logo.png" alt=".Core" height="120" width="170">
+      </div>
+      <div class="row">
+
+        <h1>שלום {{ patientName }}</h1>
+
+      </div>
+      <div class="row">
+        <h1>מה מפריע לך?</h1>
+      </div>
+      <div class="row">
+        <symptoms-dropdown [simptoms]="allSimptoms" [selectedSymptoms]="simptoms" (symptomAdded)="addSymptom($event)"></symptoms-dropdown>
+      </div>
+      <div class="row">
+        <symptoms-list [symptoms]="simptoms"></symptoms-list>
+      </div>
+      <div class="row" style="margin: 5px;">
+        <button class="btn btn-primary" [disabled]="!myForm.form.valid" (click)="save(myForm)">שלח בקשה</button>
+      </div>
+    </form>
+  </div>
+</div>

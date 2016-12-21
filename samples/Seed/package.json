@@ -1,0 +1,45 @@
+{
+  "name": "angular-express-seed",
+  "version": "1.0.0",
+  "description": "Angular2 + Express seed",
+  "scripts": {
+    "start": "gulp dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@angular/common": "~2.3.0",
+    "@angular/compiler": "~2.3.0",
+    "@angular/core": "~2.3.0",
+    "@angular/forms": "~2.3.0",
+    "@angular/http": "~2.3.0",
+    "@angular/platform-browser": "~2.3.0",
+    "@angular/platform-browser-dynamic": "~2.3.0",
+    "@angular/router": "~3.3.0",
+    "angular-in-memory-web-api": "~0.1.17",
+    "core-js": "^2.4.1",
+    "reflect-metadata": "^0.1.8",
+    "rxjs": "5.0.0-rc.4",
+    "systemjs": "0.19.40",
+    "zone.js": "^0.7.2",
+    "body-parser": "~1.15.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.14.0",
+    "hbs": "~4.0.1",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.0.34",
+    "@types/node": "^6.0.46",
+    "gulp": "^3.9.1",
+    "lodash": "^4.16.4",
+    "nodemon": "^1.11.0",
+    "open": "0.0.5",
+    "shelljs": "^0.7.5",
+    "typescript": "^2.0.10"
+  },
+  "repository": {}
+}
