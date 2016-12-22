@@ -1,0 +1,5 @@
+<sebm-google-map [latitude]="latPartner" [longitude]="lngPartner">
+  <sebm-google-map-marker [latitude]="latPartner" [longitude]="lngPartner" iconUrl="/images/heart.png"></sebm-google-map-marker>
+  <sebm-google-map-marker *ngIf="latTask" [latitude]="latTask" [longitude]="lngTask"></sebm-google-map-marker>
+</sebm-google-map>
+

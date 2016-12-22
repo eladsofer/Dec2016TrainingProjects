@@ -1,0 +1,45 @@
+<md-card *ngIf="review && review.owner">
+  <md-card-subtitle>Review #{{review.id}}</md-card-subtitle>
+  <md-card-title>The truth about NASDAQ's fall</md-card-title>
+  <md-card-content class="review-stock">
+    <p>Stock:
+      <button md-raised-button color="primary" (click)="onStockClick()">Bla bla bla, NASDAQ</button>
+      <modal #stockModal>
+        <modal-header [show-close]="true">
+          <h4 class="modal-title">
+            Blaaaaaaaaa
+          </h4>
+        </modal-header>
+        <modal-body>
+          <stock-main *ngIf="isStockModalOpen" [display-stock]="review.stock" [is-collapsed]="false"></stock-main>
+        </modal-body>
+        <modal-footer [show-default-buttons]="true"></modal-footer>
+      </modal>
+    </p>
+  </md-card-content>
+  <md-card-content class="review-author">
+    <p>Author:
+      <button md-raised-button color="primary" (click)="onAuthorClick()">{{review.owner.firstName}} {{review.owner.lastName}}</button>
+      <modal #authorModal>
+        <modal-header [show-close]="true">
+          <h4 class="modal-title">
+            <user-profile *ngIf="isAuthorModalOpen" [profile-user]="review.owner"></user-profile>
+          </h4>
+        </modal-header>
+        <modal-body>
+          Hello World!
+        </modal-body>
+        <modal-footer [show-default-buttons]="true"></modal-footer>
+      </modal>
+    </p>
+  </md-card-content>
+  <md-card-content class="review-content" *ngIf="!isCollapsed">
+    {{review.content}}
+  </md-card-content>
+  <!-- TODO: Add new-comment-component HERE!-->
+  <comment-component *ngFor="let reviewComment of review.comments" [display-comment]="reviewComment"></comment-component>
+  <md-card-actions>
+    <button md-button>LIKE</button>
+    <button md-button>SHARE</button>
+  </md-card-actions>
+</md-card>

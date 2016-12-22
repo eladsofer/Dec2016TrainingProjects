@@ -1,0 +1,42 @@
+md-card {
+  margin: 0 16px 16px 0;
+  width: 350px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.blue {
+  background-color: #B0BECC;
+}
+
+.blue md-card-actions {
+  display: flex;
+  flex-direction: column;
+}
+
+md-card-subtitle {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.review-stock {
+  font-size:18px;
+  font-weight:600;
+}
+
+.review-author {
+  font-size:18px;
+  font-weight:600;
+}
+
+.review-content {
+  font-size: 21px;
+  font-weight:400;
+  font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-style: normal;
+  line-height:1.58;
+  letter-spacing:-.003em;
+}

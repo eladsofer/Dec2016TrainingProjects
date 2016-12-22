@@ -1,0 +1,6 @@
+<div class="list-group" style="margin: 20px;">
+  <p class="list-group-item clearfix" *ngFor="let symptom of symptoms; let i = index;">
+    {{symptom.description}}
+    <span (click)="remove(i)" class="glyphicon glyphicon-remove-circle pull-right" style="font-size: 1.5em; cursor: pointer;"></span>
+  </p>
+</div>

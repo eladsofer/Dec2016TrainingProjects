@@ -1,0 +1,37 @@
+<div>
+  <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal" style="position: absolute;top:0;left:0;">+</button>
+  <ul  class="list-group list-group-flush">
+    <li *ngFor="let item of agendaList" class="list-group-item">
+      <h4>{{item.agendaDate.getDate()}}/{{item.agendaDate.getMonth()+1}}/{{item.agendaDate.getFullYear()}}</h4>
+      <p *ngFor="let task of item.agendaTasks" style="text-align:right"  >
+        <span *ngIf="task.time" >
+         <Strong>{{task.time}}</Strong>  {{task.name}}
+        </span>
+      <span *ngIf="!task.time">
+        <Strong>{{task.name}}</Strong>
+      </span>
+      </p>
+    </li>
+  </ul>
+</div>
+
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <input type="text" class="form-control" placeholder="משימה"  required [(ngModel)]="newItem.name"/>
+        <input type="datetime-local" class="form-control" placeholder="שעה" [(ngModel)]="newItem.time"/>
+        <input type="text" [(ngModel)] = "address" class="form-control"  (setAddress) = "getAddress($event)" googleplace/>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="AddTaskItem($event)">שמור</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">בטל</button>
+      </div>
+    </div>
+  </div>
+</div>
+

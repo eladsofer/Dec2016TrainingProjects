@@ -1,0 +1,10 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  background-color: #E6E6FA;
+}
+
+.logo-img {
+  height: 150px;
+  width: 200px;
+}
