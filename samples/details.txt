@@ -1,4 +1,0 @@
-GIT
----
-UN: es-user4-dec2016
-PW: abcd1234
